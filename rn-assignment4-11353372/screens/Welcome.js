@@ -19,7 +19,7 @@ function Welcome({navigation}) {
         marginTop: 20,
         backgroundColor: '#356899',
         height: 50,
-        width: 317,
+        width: 315 ,
         marginLeft: 25,
         alignItems: 'center',
         justifyContent: 'center',
