@@ -19,16 +19,18 @@ export default function PopularJobs() {
             renderItem={({ item }) => (
 
                   <View style={styles.contain}>
-                  <View>
+                  <View style={{flexDirection: 'row', alignItems: 'center'}}>
                     <Image style={styles.image} source={item.image}/>
-                    </View>
 
-                    <View>
+                    <View style={{flexDirection: 'column'}}>
                         <Text style={styles.postion}>{item.postion}</Text>
                         <Text style={styles.company}>{item.company}</Text>
                     </View>
+                    </View>
 
-                    <View>
+                    
+
+                    <View style={{flexDirection: 'column'}}>
                     <Text style={styles.salary}>{item.salary}</Text>
                         <Text style={styles.location}>{item.location}</Text>
                     </View>
@@ -41,29 +43,35 @@ export default function PopularJobs() {
 }
 
 const Popularjobs = [
-    {id: 1, image: require('../assets/burger-king.png'), postion: 'Jr Executive', company: 'Burger King', 
+    {id: 1, image: require('../assets/burger-king.png'), postion: 'Jnr Executive', company: 'Burger King', 
       salary: '$96,000/y', location: 'Los Angels, US'},
 
     {id: 2, image: require('../assets/beats.png'), postion: 'Product Manager', company: 'Amazon', 
         salary: '$86,000/y', location: 'Florida, US'},
 
     {id: 3, image: require('../assets/facebook.png'), postion: 'Product Manager', company: 'Facebook', 
-        salary: '$86,000/y', location: 'Florida, US'},
+        salary: '$86,000/y', location: 'Ohio, US'},
 
-    {id: 4, image: require('../assets/amazon.png'), postion: 'Sr Executive', company: 'Amazon', 
+    {id: 4, image: require('../assets/amazon.png'), postion: 'Snr Executive', company: 'Amazon', 
         salary: '$99,000/y', location: 'Liverpool, UK'},
 
     {id: 5, image: require('../assets/microsoft.png'), postion: 'DevOps Engineer', company: 'Microsoft', 
-        salary: '$96,000/y', location: 'Los Angels, US'},
+        salary: '$96,000/y', location: 'Alaska, US'},
   
     {id: 6, image: require('../assets/spotify.png'), postion: 'Data Scientist', company: 'Spotify ', 
-        salary: '$78,000/y', location: 'Los Angels, US'},
+        salary: '$78,000/y', location: 'Illinois, US'},
   
     {id: 7, image: require('../assets/tesla.png'), postion: 'Electrical Engineer', company: 'Tesla', 
-        salary: '$126,000/y', location: 'Los Angels, US'},
+        salary: '$126,000/y', location: 'Nebraska, US'},
       
     {id: 8, image: require('../assets/uber.png'), postion: 'Marketing Specialist', company: 'Uber', 
-        salary: '$102,500/y', location: 'Los Angels, US'},
+        salary: '$102,500/y', location: 'Nevada, US'},
+
+    {id: 9, image: require('../assets/airbnb.png'), postion: 'Project Manager', company: 'AirBnb', 
+        salary: '$208,550/y', location: 'Kansas, US'},
+      
+    {id: 10, image: require('../assets/twitter.png'), postion: 'Comus Manager', company: 'Twitter', 
+        salary: '$102,500/y', location: 'Connecticut, US'},
 ]
 
 const styles = StyleSheet.create({
@@ -75,7 +83,8 @@ const styles = StyleSheet.create({
   
   image: {
     height: 45,
-    width: 45
+    width: 45,
+    marginRight: 15
   },
 
   contain: {
@@ -86,26 +95,21 @@ const styles = StyleSheet.create({
     borderWidth: 0.3,
     borderColor: 'gray',
     borderRadius: 15,
-    margin: 20
+    margin: 20, 
+    justifyContent: 'space-between'
   },
 
   postion: {
     fontWeight: 'bold',
     fontSize: 16,
-    marginLeft: 20
   },
 
   salary: {
     fontWeight: 'bold',
     fontSize: 14,
-    marginLeft: 100
   },
 
-  company: {
-    marginLeft: 27
-  },
-
-  location: {
-    marginLeft: 73
+  salary: {
+    fontWeight: 'bold',
   }
 });

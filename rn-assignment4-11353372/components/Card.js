@@ -16,7 +16,7 @@ export default function Card() {
           data={jobs}
           renderItem={({ item }) => (
             <ImageBackground 
-              source={require('../assets/backgroundimages.png')} 
+              source={require('../assets/logo (2).png')} 
               style={[styles.card, { backgroundColor: item.backgroundColor }]}
               imageStyle={{ borderRadius: 20 }}
             >
