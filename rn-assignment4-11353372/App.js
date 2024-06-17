@@ -19,6 +19,7 @@ export default function App() {
       <Stack.Screen 
               name='Jobs'
               component={JobsScreen}
+              option= {{headerShown: false}}
               />
 
       </Stack.Navigator>
