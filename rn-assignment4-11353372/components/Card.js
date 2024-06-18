@@ -16,28 +16,28 @@ export default function Card() {
           data={jobs}
           renderItem={({ item }) => (
             <ImageBackground 
-              source={require('../assets/logo (2).png')} 
+              source={require('../assets/backgroundimages.png')} 
               style={[styles.card, { backgroundColor: item.backgroundColor }]}
               imageStyle={{ borderRadius: 20 }}
             >
+              <View style={styles.transparentBackground}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', paddingBottom: 50, marginBottom: 30 }}>
+                  <Image style={styles.image} source={item.image} />
+                  <View style={{ marginLeft: 15 }}>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <Text style={styles.company}>{item.company}</Text>
+                  </View>
+                </View>
 
-              <View style={{ flexDirection: 'row', alignItems: 'center', paddingBottom: 50, marginBottom: 30 }}>
-                <Image style={styles.image} source={item.image} />
-                <View style={{ marginLeft: 15 }}>
-                  <Text style={styles.title}>{item.title}</Text>
-                  <Text style={styles.company}>{item.company}</Text>
+                <View style={{ flexDirection: 'row' }}>
+                  <View>
+                    <Text style={styles.salary}>{item.salary}</Text>
+                  </View>
+                  <View>
+                    <Text style={styles.location}>{item.location}</Text>
+                  </View>
                 </View>
               </View>
-
-              <View style={{ flexDirection: 'row' }}>
-                <View>
-                  <Text style={styles.salary}>{item.salary}</Text>
-                </View>
-                <View>
-                  <Text style={styles.location}>{item.location}</Text>
-                </View>
-              </View>
-
             </ImageBackground>
           )}
           keyExtractor={(item) => item.id.toString()}
@@ -51,26 +51,16 @@ export default function Card() {
 
 const jobs = [
   { id: 1, image: require('../assets/facebook.png'), title: 'Software Engineer', company: 'Facebook', salary: '$180,000', location: 'Accra, Ghana', backgroundColor: '#5386E4' },
-
   { id: 2, image: require('../assets/google.png'), title: 'Data Analyst', company: 'Google', salary: '$200,000', location: 'Accra, Ghana', backgroundColor: '#FF6347' },
-
   { id: 3, image: require('../assets/amazon.png'), title: 'DevOps Engineer', company: 'Amazon', salary: '$220,000', location: 'Accra, Ghana', backgroundColor: '#32CD32' },
-
   { id: 4, image: require('../assets/microsoft.png'), title: 'Software Engineer', company: 'Microsoft', salary: '$210,000', location: 'Accra, Ghana', backgroundColor: '#8A2BE2' },
-
   { id: 5, image: require('../assets/airbnb.png'), title: 'Product Manager', company: 'Airbnb', salary: '$190,000', location: 'Accra, Ghana', backgroundColor: '#FF4500' },
-
   { id: 6, image: require('../assets/uber.png'), title: 'Data Scientist', company: 'Uber', salary: '$200,000', location: 'Accra, Ghana', backgroundColor: '#FFD700' },
-
   { id: 7, image: require('../assets/netflix.png'), title: 'DevOps Engineer', company: 'Netflix', salary: '$210,000', location: 'Accra, Ghana', backgroundColor: '#6A5ACD' },
-
   { id: 8, image: require('../assets/spotify.png'), title: 'UI/UX Designer', company: 'Spotify', salary: '$180,000', location: 'Accra, Ghana', backgroundColor: '#20B2AA' },
-
   { id: 9, image: require('../assets/tesla.png'), title: 'Electrical Engineer', company: 'Tesla', salary: '$220,000', location: 'Accra, Ghana', backgroundColor: '#FF69B4' },
-  
   { id: 10, image: require('../assets/twitter.png'), title: 'Marketing Specialist', company: 'Twitter', salary: '$160,000', location: 'Accra, Ghana', backgroundColor: '#1E90FF' },
 ];
-
 
 const styles = StyleSheet.create({
   container: {
@@ -91,6 +81,7 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 5,
   },
+
   image: {
     height: 40,
     width: 40,

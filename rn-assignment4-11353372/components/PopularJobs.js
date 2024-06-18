@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, FlatList, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
 
 export default function PopularJobs() {
 
@@ -46,7 +46,7 @@ const Popularjobs = [
     {id: 1, image: require('../assets/burger-king.png'), postion: 'Jnr Executive', company: 'Burger King', 
       salary: '$96,000/y', location: 'Los Angels, US'},
 
-    {id: 2, image: require('../assets/beats.png'), postion: 'Product Manager', company: 'Amazon', 
+    {id: 2, image: require('../assets/beats.png'), postion: 'Product Manager', company: 'Beats', 
         salary: '$86,000/y', location: 'Florida, US'},
 
     {id: 3, image: require('../assets/facebook.png'), postion: 'Product Manager', company: 'Facebook', 

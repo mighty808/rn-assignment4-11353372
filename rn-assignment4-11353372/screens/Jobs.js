@@ -1,17 +1,23 @@
-import Card from '../components/Card';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
 import Header from '../components/Header';
-import { StyleSheet, Text, View } from 'react-native';
+import Card from '../components/Card';
 import PopularJobs from '../components/PopularJobs';
 
-export default function App() {
+
+function JobsScreen({ route }) {
+  const { name, email } = route.params;
+
   return (
     <View style={styles.container}>
-      <Header />
+      <Header name={name} email={email} />
       <Card />
       <PopularJobs />
     </View>
   );
 }
+
+export default JobsScreen;
 
 const styles = StyleSheet.create({
   container: {
