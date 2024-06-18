@@ -92,11 +92,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'FAFAFA',
     flexDirection: 'row', 
     alignItems: 'center',
-    borderWidth: 0.3,
+    borderWidth: 0.1,
     borderColor: 'gray',
-    borderRadius: 15,
+    borderRadius: 5,
     margin: 20, 
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
 
   postion: {
